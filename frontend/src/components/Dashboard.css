@@ -1,0 +1,737 @@
+/* Dashboard Container */
+.dashboard {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+/* Loading State */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  text-align: center;
+}
+
+.loading-spinner {
+  width: 60px;
+  height: 60px;
+  border: 4px solid rgba(76, 201, 240, 0.2);
+  border-top: 4px solid #4cc9f0;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 2rem;
+}
+
+.loading-text {
+  font-size: 1.2rem;
+  color: #4cc9f0;
+  font-family: 'Orbitron', sans-serif;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Error State */
+.error-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  text-align: center;
+  padding: 2rem;
+}
+
+.error-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.error-title {
+  font-size: 2rem;
+  color: #f72585;
+  margin-bottom: 1rem;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.error-message {
+  font-size: 1.1rem;
+  color: #b8b8b8;
+  margin-bottom: 2rem;
+}
+
+.retry-button {
+  background: linear-gradient(135deg, #4cc9f0, #7209b7);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.retry-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(76, 201, 240, 0.3);
+}
+
+/* Header Section */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: rgba(15, 12, 41, 0.6);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(76, 201, 240, 0.2);
+}
+
+.header-content h1 {
+  font-size: 2.5rem;
+  margin: 0 0 0.5rem 0;
+  background: linear-gradient(135deg, #4cc9f0, #7209b7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.dashboard-subtitle {
+  font-size: 1.1rem;
+  color: #b8b8b8;
+  margin: 0;
+}
+
+.header-stats {
+  display: flex;
+  gap: 2rem;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-value {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #4cc9f0;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #b8b8b8;
+}
+
+/* Main Content Grid */
+.dashboard-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Featured Section */
+.featured-section {
+  background: rgba(15, 12, 41, 0.4);
+  border-radius: 20px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(76, 201, 240, 0.2);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.title-icon {
+  font-size: 1.8rem;
+}
+
+.section-date {
+  color: #b8b8b8;
+  font-size: 0.9rem;
+}
+
+/* APOD Card */
+.apod-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  background: rgba(48, 43, 99, 0.3);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.apod-visual {
+  border-radius: 15px;
+  overflow: hidden;
+  height: 300px;
+}
+
+.video-content {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #7209b7, #4cc9f0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.video-thumbnail {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.play-icon {
+  font-size: 3rem;
+  color: white;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.apod-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.apod-title {
+  font-size: 1.8rem;
+  margin: 0 0 1rem 0;
+  color: #4cc9f0;
+}
+
+.apod-description {
+  color: #b8b8b8;
+  line-height: 1.6;
+  margin: 0 0 1.5rem 0;
+}
+
+.apod-meta {
+  display: flex;
+  gap: 2rem;
+  font-size: 0.9rem;
+}
+
+.apod-date, .apod-source {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #b8b8b8;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.apod-source:hover {
+  color: #4cc9f0;
+}
+
+.meta-icon {
+  font-size: 1rem;
+}
+
+/* Secondary Grid */
+.secondary-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+/* Tracker Card */
+.tracker-card, .weather-card {
+  background: rgba(15, 12, 41, 0.4);
+  border-radius: 20px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(76, 201, 240, 0.2);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.card-icon {
+  font-size: 1.5rem;
+}
+
+.card-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background: #2ed573;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+.status-text {
+  font-size: 0.9rem;
+  color: #2ed573;
+}
+
+.tracker-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.tracker-map {
+  background: rgba(48, 43, 99, 0.5);
+  border-radius: 10px;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.map-placeholder {
+  width: 100%;
+  height: 100%;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Equirectangular_projection_SW.jpg/1024px-Equirectangular_projection_SW.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.iss-marker {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: #ff4757;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px rgba(255, 71, 87, 0.8);
+}
+
+.tracker-data {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.data-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem;
+  background: rgba(48, 43, 99, 0.3);
+  border-radius: 8px;
+}
+
+.data-label {
+  color: #b8b8b8;
+  font-size: 0.9rem;
+}
+
+.data-value {
+  color: #4cc9f0;
+  font-weight: 600;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.weather-content {
+  min-height: 200px;
+}
+
+.tracker-error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  color: #b8b8b8;
+}
+
+/* Events Section */
+.events-section {
+  background: rgba(15, 12, 41, 0.4);
+  border-radius: 20px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(76, 201, 240, 0.2);
+}
+
+.view-all-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #4cc9f0;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: gap 0.3s ease;
+}
+
+.view-all-link:hover {
+  gap: 1rem;
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+.view-all-link:hover .arrow {
+  transform: translateX(5px);
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Stats Section */
+.stats-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.stat-card {
+  background: rgba(15, 12, 41, 0.4);
+  border-radius: 20px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(76, 201, 240, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(76, 201, 240, 0.2);
+}
+
+.stat-card .stat-icon {
+  font-size: 2.5rem;
+}
+
+.stat-info h4 {
+  margin: 0 0 0.5rem 0;
+  color: #4cc9f0;
+  font-size: 1.1rem;
+}
+
+.stat-info p {
+  margin: 0;
+  color: #b8b8b8;
+  font-size: 0.9rem;
+}
+
+/* Error Card */
+.error-card {
+  background: rgba(247, 37, 133, 0.1);
+  border: 1px solid rgba(247, 37, 133, 0.3);
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.error-card .error-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.error-card h3 {
+  margin: 0 0 1rem 0;
+  color: #f72585;
+}
+
+.error-card p {
+  margin: 0;
+  color: #b8b8b8;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .dashboard-header {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  
+  .apod-card {
+    grid-template-columns: 1fr;
+  }
+  
+  .secondary-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .tracker-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 1rem;
+  }
+  
+  .dashboard-header {
+    padding: 1.5rem;
+  }
+  
+  .header-content h1 {
+    font-size: 2rem;
+  }
+  
+  .featured-section, .events-section {
+    padding: 1.5rem;
+  }
+  
+  .tracker-card, .weather-card {
+    padding: 1.5rem;
+  }
+  
+  .events-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .stats-section {
+    grid-template-columns: 1fr;
+  }
+}
+/* Add these new styles to your existing Dashboard.css */
+
+.apod-error-card {
+  background: rgba(247, 37, 133, 0.1);
+  border: 1px solid rgba(247, 37, 133, 0.3);
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+
+.apod-error-card .error-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.apod-error-card .error-title {
+  margin: 0 0 1rem 0;
+  color: #f72585;
+}
+
+.apod-error-card .error-message {
+  margin: 0 0 1.5rem 0;
+  color: #b8b8b8;
+}
+
+.apod-error-card .retry-button {
+  background: linear-gradient(135deg, #4cc9f0, #7209b7);
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+.apod-error-card .retry-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(76, 201, 240, 0.4);
+}
+
+.apod-error-card .external-link {
+  display: inline-block;
+  color: #4cc9f0;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.apod-error-card .external-link:hover {
+  color: #7209b7;
+}
+
+.apod-loading-card {
+  background: rgba(15, 12, 41, 0.4);
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+
+.apod-loading-card .loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(76, 201, 240, 0.3);
+  border-top: 4px solid #4cc9f0;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+.apod-loading-card p {
+  color: #b8b8b8;
+  margin: 0;
+}
+/* Add these new styles to your existing Dashboard.css */
+
+.apod-rate-limit-card {
+  background: rgba(255, 152, 0, 0.1);
+  border: 1px solid rgba(255, 152, 0, 0.3);
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+
+.rate-limit-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.rate-limit-title {
+  margin: 0 0 1rem 0;
+  color: #ff9800;
+}
+
+.rate-limit-message {
+  margin: 0 0 1.5rem 0;
+  color: #b8b8b8;
+  font-size: 1.1rem;
+}
+
+.rate-limit-info {
+  background: rgba(255, 152, 0, 0.05);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+  width: 100%;
+  max-width: 500px;
+}
+
+.rate-limit-info p {
+  margin: 0 0 0.8rem 0;
+  color: #b8b8b8;
+}
+
+.rate-limit-info p:last-child {
+  margin-bottom: 0;
+}
+
+.rate-limit-info strong {
+  color: #ff9800;
+}
+
+.rate-limit-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.rate-limit-actions .retry-button {
+  background: linear-gradient(135deg, #ff9800, #f57c00);
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.rate-limit-actions .retry-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 152, 0, 0.4);
+}
+
+.rate-limit-actions .external-link {
+  display: inline-block;
+  background: rgba(255, 152, 0, 0.1);
+  color: #ff9800;
+  text-decoration: none;
+  padding: 0.8rem 2rem;
+  border-radius: 25px;
+  border: 1px solid rgba(255, 152, 0, 0.3);
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.rate-limit-actions .external-link:hover {
+  background: rgba(255, 152, 0, 0.2);
+  transform: translateY(-2px);
+}
+/* Add these styles to your existing Dashboard.css */
+
+.dashboard-section {
+  background: rgba(15, 12, 41, 0.4);
+  border-radius: 20px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(76, 201, 240, 0.2);
+  margin-bottom: 2rem;
+}
+
+.dashboard-section h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(76, 201, 240, 0.2);
+}

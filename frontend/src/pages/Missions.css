@@ -1,0 +1,348 @@
+/* Missions page styles */
+.missions-page {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.missions-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.missions-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  background: var(--gradient-4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.missions-header p {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+}
+
+.missions-content {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 2rem;
+}
+
+.missions-filters {
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 2rem;
+  height: fit-content;
+  position: sticky;
+  top: 100px;
+}
+
+.filter-group {
+  margin-bottom: 1.5rem;
+}
+
+.filter-group label {
+  display: block;
+  color: var(--primary-color);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.filter-group select {
+  width: 100%;
+  background: rgba(48, 43, 99, 0.5);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.filter-group select:hover {
+  border-color: var(--primary-color);
+}
+
+.missions-timeline {
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.missions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.mission-card {
+  background: rgba(48, 43, 99, 0.5);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: var(--transition);
+  cursor: pointer;
+  position: relative;
+}
+
+.mission-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.mission-card.selected {
+  border: 2px solid var(--primary-color);
+}
+
+.mission-image {
+  width: 100%;
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.mission-image::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to top, rgba(15, 12, 41, 0.9), transparent);
+}
+
+.mission-info {
+  padding: 1.5rem;
+}
+
+.mission-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.mission-status {
+  padding: 0.3rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.status-upcoming {
+  background: rgba(247, 37, 133, 0.2);
+  color: var(--accent-color);
+}
+
+.status-progress {
+  background: rgba(76, 201, 240, 0.2);
+  color: var(--primary-color);
+}
+
+.status-completed {
+  background: rgba(46, 213, 115, 0.2);
+  color: #2ed573;
+}
+
+.mission-agency {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.mission-description {
+  margin: 0;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.mission-detail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 12, 41, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  overflow-y: auto;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.detail-content {
+  background: var(--card-bg);
+  border-radius: 20px;
+  max-width: 1000px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.close-detail {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--accent-color);
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.close-detail:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(247, 37, 133, 0.5);
+}
+
+.detail-header {
+  padding: 2rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.detail-header h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.detail-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.detail-content {
+  padding: 2rem;
+}
+
+.detail-description {
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
+.detail-description h3 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.detail-description ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.detail-description li {
+  margin-bottom: 0.5rem;
+}
+
+.milestones {
+  margin-top: 2rem;
+}
+
+.milestone {
+  background: rgba(48, 43, 99, 0.5);
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  border-left: 3px solid var(--primary-color);
+}
+
+.milestone-date {
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.milestone-description {
+  margin-bottom: 0.5rem;
+}
+
+.milestone-status {
+  display: inline-block;
+  padding: 0.3rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.milestone-status.completed {
+  background: rgba(46, 213, 115, 0.2);
+  color: #2ed573;
+}
+
+.milestone-status.upcoming {
+  background: rgba(247, 37, 133, 0.2);
+  color: var(--accent-color);
+}
+
+.mission-progress {
+  margin-top: 2rem;
+  background: rgba(48, 43, 99, 0.5);
+  border-radius: 15px;
+  padding: 1.5rem;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--gradient-4);
+  border-radius: 5px;
+  transition: width 1s ease;
+}
+
+.progress-text {
+  text-align: right;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .missions-header h1 {
+    font-size: 2rem;
+  }
+  
+  .missions-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .missions-filters {
+    position: static;
+  }
+  
+  .missions-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .detail-content {
+    padding: 1rem;
+  }
+  
+  .detail-header {
+    padding: 1rem;
+  }
+}

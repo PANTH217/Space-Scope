@@ -1,0 +1,164 @@
+/* MissionTimeline styles */
+.mission-timeline {
+  position: relative;
+  padding: 2rem 0;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: var(--gradient-4);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -2.5rem;
+  top: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  box-shadow: 0 0 0 4px rgba(76, 201, 240, 0.3);
+}
+
+.timeline-content {
+  background: rgba(48, 43, 99, 0.5);
+  border-radius: 15px;
+  padding: 1.5rem;
+  position: relative;
+  transition: var(--transition);
+  border-left: 3px solid transparent;
+}
+
+.timeline-content.status-upcoming {
+  border-left-color: var(--accent-color);
+}
+
+.timeline-content.status-progress {
+  border-left-color: var(--primary-color);
+}
+
+.timeline-content.status-completed {
+  border-left-color: #2ed573;
+}
+
+.timeline-content:hover {
+  transform: translateX(10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.mission-date {
+  font-size: 0.9rem;
+  color: var(--primary-color);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.mission-title {
+  margin: 0 0 1rem 0;
+  font-size: 1.2rem;
+}
+
+.mission-description {
+  margin: 0 0 1rem 0;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.mission-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.mission-agency {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.mission-status {
+  padding: 0.3rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.status-upcoming {
+  background: rgba(247, 37, 133, 0.2);
+  color: var(--accent-color);
+}
+
+.status-progress {
+  background: rgba(76, 201, 240, 0.2);
+  color: var(--primary-color);
+}
+
+.status-completed {
+  background: rgba(46, 213, 115, 0.2);
+  color: #2ed573;
+}
+
+.mission-progress {
+  margin-top: 1rem;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--gradient-4);
+  border-radius: 4px;
+  transition: width 1s ease;
+}
+
+.progress-text {
+  text-align: right;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .timeline {
+    padding-left: 1rem;
+  }
+  
+  .timeline::before {
+    left: 0;
+  }
+  
+  .timeline-marker {
+    left: -1.5rem;
+  }
+  
+  .mission-details {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

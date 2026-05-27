@@ -1,0 +1,1 @@
+import React from 'react';import Dashboard from '../components/Dashboard';const Home = () => {  return (    <div className="animate-[fadeIn_0.5s_ease-out]">      <Dashboard />    </div>  );};export default Home;
