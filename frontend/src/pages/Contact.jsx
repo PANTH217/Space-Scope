@@ -14,39 +14,39 @@ const Contact = () => {
              👨‍💻
            </div>
         </div>
-        <div className="flex-1 text-center md:text-left w-full overflow-hidden">
-          <h1 className="text-4xl md:text-5xl font-display font-bold mb-2 break-words">Panth Haveliwala</h1>
+        <div className="flex-1 text-center md:text-left w-full">
+          <h1 className="text-4xl md:text-5xl font-display font-bold mb-2">Panth Haveliwala</h1>
           <p className="text-brand-primary font-mono tracking-widest text-sm mb-6">MISSION COMMANDER</p>
           <p className="text-gray-300 text-lg leading-relaxed mb-8">
             Thank you for exploring the cosmos with SpaceScope. If you have any inquiries regarding the telemetry data, codebase structure, or if you encounter any anomalies, please reach out via the secure channels below.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="flex flex-col gap-4 w-full">
             <a href="mailto:panthhaveliwala@gmail.com" className="bg-white/5 border border-white/10 p-4 rounded-xl hover:bg-white/10 hover:border-brand-primary/50 transition-all flex items-center gap-4 group">
               <span className="text-2xl group-hover:scale-110 transition-transform">✉️</span>
-              <div className="text-left w-full">
+              <div className="text-left flex-1 min-w-0">
                 <p className="text-[10px] text-gray-500 font-mono tracking-wider">EMAIL COMM LINK</p>
-                <p className="text-white font-bold text-sm break-all">panthhaveliwala@gmail.com</p>
+                <p className="text-white font-bold text-sm md:text-base truncate">panthhaveliwala@gmail.com</p>
               </div>
             </a>
             <a href="tel:+919265507356" className="bg-white/5 border border-white/10 p-4 rounded-xl hover:bg-white/10 hover:border-green-500/50 transition-all flex items-center gap-4 group">
               <span className="text-2xl group-hover:scale-110 transition-transform">📱</span>
-              <div className="text-left w-full">
+              <div className="text-left flex-1 min-w-0">
                 <p className="text-[10px] text-gray-500 font-mono tracking-wider">SECURE DIRECT LINE (INDIA)</p>
-                <p className="text-white font-bold text-sm">+91 92655 07356</p>
+                <p className="text-white font-bold text-sm md:text-base truncate">+91 92655 07356</p>
               </div>
             </a>
             <a href="https://github.com/PANTH217" target="_blank" rel="noreferrer" className="bg-white/5 border border-white/10 p-4 rounded-xl hover:bg-white/10 hover:border-brand-secondary/50 transition-all flex items-center gap-4 group">
               <span className="text-2xl group-hover:scale-110 transition-transform">💻</span>
-              <div className="text-left w-full">
+              <div className="text-left flex-1 min-w-0">
                 <p className="text-[10px] text-gray-500 font-mono tracking-wider">GITHUB DATABANKS</p>
-                <p className="text-white font-bold text-sm">@PANTH217</p>
+                <p className="text-white font-bold text-sm md:text-base truncate">@PANTH217</p>
               </div>
             </a>
             <a href="https://linkedin.com/in/panth-haveliwala-06811131a" target="_blank" rel="noreferrer" className="bg-white/5 border border-white/10 p-4 rounded-xl hover:bg-white/10 hover:border-[#0077b5]/50 transition-all flex items-center gap-4 group">
               <span className="text-2xl group-hover:scale-110 transition-transform">🤝</span>
-              <div className="text-left w-full">
+              <div className="text-left flex-1 min-w-0">
                 <p className="text-[10px] text-gray-500 font-mono tracking-wider">PROFESSIONAL NETWORK</p>
-                <p className="text-white font-bold text-sm">LinkedIn Profile</p>
+                <p className="text-white font-bold text-sm md:text-base truncate">LinkedIn Profile</p>
               </div>
             </a>
           </div>
